@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ProductList from "./components/product-list";
+import CartModal from "./components/cart-modal";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav className="navbar navbar-light bg-primary">
+        <div className="navbar-brand">The Shopping Website</div>
+        {/* <button className="btn btn-primary my-2 my-sm-0">Cart</button> */}
+        <CartModal />
+      </nav>
+      <div className="container">
+        <ProductList />
+      </div>
     </div>
   );
 }
